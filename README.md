@@ -1,8 +1,8 @@
 # Retail Sales & Customer Churn Intelligence Platform
 
 An end-to-end data science and ML engineering project simulating a real-world
-retail analytics platform. Covers the full pipeline: SQL data modeling, EDA,
-statistical analysis, feature engineering, multi-model ML comparison,
+retail analytics platform. Covers the full pipeline: EDA, statistical analysis,
+feature engineering (including RFM analysis), multi-model ML comparison,
 deployment via API, and business dashboards in Power BI.
 
 ## Problem Statement
@@ -15,9 +15,8 @@ future sales** to make informed decisions. This project builds:
 
 ## Tech Stack
 
-- **Database**: PostgreSQL (Dockerized)
-- **Languages**: Python, SQL
-- **Libraries**: pandas, scikit-learn, XGBoost, LightGBM, SQLAlchemy, psycopg2
+- **Languages**: Python
+- **Libraries**: pandas, numpy, scikit-learn, XGBoost, LightGBM, matplotlib, seaborn
 - **Deployment**: FastAPI, Docker
 - **Visualization**: Power BI
 - **Version Control**: Git
@@ -26,7 +25,6 @@ future sales** to make informed decisions. This project builds:
 
 retail-churn-intelligence/
 ├── data/ # raw, interim, processed data (gitignored)
-├── sql/ # schema and analytical queries
 ├── notebooks/ # EDA, feature engineering, stats, modeling
 ├── src/
 │ ├── components/ # ingestion, transformation, training, evaluation
@@ -40,15 +38,15 @@ retail-churn-intelligence/
 
 ## Pipeline Overview
 
-1. **Data ingestion** — load raw transactional data into PostgreSQL
-2. **SQL layer** — RFM scoring, cohort analysis, revenue rollups via window functions
+1. **Data ingestion** — load raw transactional data (CSV) with pandas
+2. **Data cleaning** — handle missing customer IDs, filter cancelled orders, remove invalid records
 3. **EDA** — distributions, missingness, correlations, seasonality
-4. **Feature engineering** — RFM features, lag/rolling features, encoding
+4. **Feature engineering** — RFM (Recency, Frequency, Monetary) analysis, lag/rolling features, churn labeling, encoding
 5. **Statistical testing** — hypothesis tests on churn drivers and campaign impact
-6. **Modeling** — multi-algorithm comparison (Logistic Regression → Random Forest → XGBoost/LightGBM)
+6. **Modeling** — multi-algorithm comparison (Logistic Regression → Decision Tree → Random Forest → XGBoost/LightGBM)
 7. **Evaluation** — F1/ROC-AUC (churn), RMSE/MAPE (forecasting)
 8. **Deployment** — FastAPI endpoint, Dockerized
-9. **Dashboarding** — Power BI reports connected to PostgreSQL
+9. **Dashboarding** — Power BI reports connected to processed data
 
 ## Setup
 
