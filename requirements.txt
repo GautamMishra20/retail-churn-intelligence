@@ -1,0 +1,15 @@
+pandas
+numpy
+matplotlib
+seaborn
+scipy
+scikit-learn
+xgboost
+lightgbm
+jupyter
+notebook
+fastapi
+uvicorn
+pydantic
+joblib
+python-dotenv
