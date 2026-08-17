@@ -2,6 +2,13 @@
 
 ![CI](https://github.com/GautamMishra20/retail-churn-intelligence/actions/workflows/ci.yml/badge.svg)
 
+## Live Demo
+
+API is deployed and live: **https://retail-churn-intelligence.onrender.com/docs**
+
+Try the `/predict` endpoint directly from the interactive Swagger UI.
+_(Hosted on Render's free tier — the service spins down after inactivity, so the first request may take ~30-50 seconds to wake up.)_
+
 An end-to-end data science and ML engineering project built on real UK e-commerce
 transaction data. Covers the full lifecycle: exploratory data analysis, statistical
 hypothesis testing, RFM-based feature engineering, multi-algorithm model comparison,
