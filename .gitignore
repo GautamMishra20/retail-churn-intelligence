@@ -16,6 +16,7 @@ data/processed/*
 artifacts/*
 !artifacts/.gitkeep
 models/*.pkl
+!models/.gitkeep
 
 # Jupyter
 .ipynb_checkpoints/
