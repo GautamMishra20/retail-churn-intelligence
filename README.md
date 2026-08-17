@@ -1,5 +1,7 @@
 # Retail Sales & Customer Churn Intelligence Platform
 
+![CI](https://github.com/GautamMishra20/retail-churn-intelligence/actions/workflows/ci.yml/badge.svg)
+
 An end-to-end data science and ML engineering project built on real UK e-commerce
 transaction data. Covers the full lifecycle: exploratory data analysis, statistical
 hypothesis testing, RFM-based feature engineering, multi-algorithm model comparison,
